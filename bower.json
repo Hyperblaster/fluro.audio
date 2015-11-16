@@ -1,0 +1,28 @@
+{
+  "name": "fluro.audio",
+  "description": "A package of tools and directives for embedding fluro audio",
+  "homepage": "http://fluro.io",
+  "authors": [
+    "Cade Embery"
+  ],
+  "main": "./dist/fluro.audio.min.js",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Hyperblaster/fluro.audio.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "*",
+    "angular-resource": "*",
+    "fluro.config": "*",
+    "fluro.util": "*",
+    "lodash": "*",
+  }
+}

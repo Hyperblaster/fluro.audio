@@ -23,6 +23,6 @@
     "angular-resource": "*",
     "fluro.config": "*",
     "fluro.util": "*",
-    "lodash": "*",
+    "lodash": "*"
   }
 }

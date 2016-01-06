@@ -19,10 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "*",
-    "angular-resource": "*",
     "fluro.config": "*",
     "fluro.util": "*",
-    "lodash": "*"
   }
 }

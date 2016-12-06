@@ -11,7 +11,7 @@ angular.module('fluro.audio', [
 angular.module('fluro.audio')
 
 
-.directive('fluroAudio', function($compile, Fluro) {
+.directive('fluroAudio', ['$compile', 'Fluro', function($compile, Fluro) {
 
     return {
         restrict: 'E',
@@ -73,7 +73,7 @@ angular.module('fluro.audio')
 
 
     };
-})
+}])
 
 /////////////////////////////////////////////////////
 
@@ -87,7 +87,7 @@ angular.module('fluro.audio')
 
 /////////////////////////////////////////////////////
 
-.controller('FluroAudioController', function($scope) {
+.controller('FluroAudioController', ['$scope', function($scope) {
 
 
 
@@ -95,11 +95,11 @@ angular.module('fluro.audio')
     // var urlString = $fluro_url + '/get/' + $scope.id;
 
     //$scope.url = urlString;
-})
+}])
 
 /////////////////////////////////////////////////////
 
-.service('AudioTools', function($http) {
+.service('AudioTools', ['$http', function($http) {
 
     var controller = {}
 
@@ -118,12 +118,12 @@ angular.module('fluro.audio')
     /////////////////////////////////////////////////////
 
     return controller;
-});
+}]);
 'use strict';
 
 angular.module('fluro.audio')
 /**/
-.service('SoundcloudEmbedSettings', function($http) {
+.service('SoundcloudEmbedSettings', ['$http', function($http) {
 
     var controller = {};
 
@@ -137,9 +137,9 @@ angular.module('fluro.audio')
     /////////////////////////
 
     return controller;
-})
+}])
 
-    .directive('soundcloudAudio', function($compile, SoundcloudEmbedSettings) {
+    .directive('soundcloudAudio', ['$compile', 'SoundcloudEmbedSettings', function($compile, SoundcloudEmbedSettings) {
         return {
             restrict: 'E',
              scope: {
@@ -230,7 +230,7 @@ angular.module('fluro.audio')
                 $element.replaceWith(cTemplate);
             }
         };
-    })
+    }])
 
 .filter('trustSoundcloud', ['$sce',
     function($sce) {

@@ -238,5 +238,5 @@ angular.module('fluro.audio')
             return $sce.trustAsResourceUrl(val);
         };
     }
-])
+]);
 /**/
